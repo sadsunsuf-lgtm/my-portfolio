@@ -8,13 +8,25 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); }
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* UPDATED REVEAL SECTION */
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: all 0.8s ease-out; 
+            visibility: hidden; 
+        }
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+            visibility: visible; 
+        }
+
+        /* Ensure buttons stay on top and clickable */
+        .btn-container { position: relative; z-index: 10; }
     </style>
 </head>
-<body class="bg-[#020617] text-slate-200 font-sans scroll-smooth">
-
-    <nav class="fixed w-full z-50 glass border-b border-slate-800">
+<body class="bg-[#020617] text-slate-200 font-sans"> <nav class="fixed w-full z-50 glass border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <h1 class="text-xl font-mono font-bold tracking-tighter text-emerald-400">AI_ENGINEER_</h1>
             <div class="space-x-8 hidden md:flex text-sm font-medium">
@@ -36,8 +48,9 @@
             <p class="text-slate-400 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed">
                 Hi, I'm <strong>Sana Nasir</strong>. I specialize in bridging the gap between raw data and business intelligence through Generative AI and autonomous agents.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="bg-emerald-500 hover:bg-emerald-600 text-[#020617] font-bold py-3 px-10 rounded-lg transition duration-300">View 8 Projects</a>
+            
+            <div class="flex flex-wrap justify-center gap-4 btn-container">
+                <a href="#projects" class="bg-emerald-500 hover:bg-emerald-600 text-[#020617] font-bold py-3 px-10 rounded-lg transition duration-300">View Projects</a>
                 <a href="#contact" class="border border-slate-700 hover:border-emerald-400 py-3 px-10 rounded-lg transition duration-300 text-white">Contact Me</a>
             </div>
         </section>
@@ -64,43 +77,47 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <div class="group border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all bg-slate-900/20 p-8">
-                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">Project 01</span>
-                    <h4 class="text-2xl font-bold text-white mt-2 mb-4">Autonomous AI Content Engineer</h4>
-                    <p class="text-slate-400 mb-6 text-sm">Multimodal SaaS using Gemini 2.5 Flash for copywriting and Pollinations AI for dynamic visual generation.</p>
-                    <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Gemini 2.5</span>
-                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Discord Webhooks</span>
+                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">New Project</span>
+                    <h4 class="text-2xl font-bold text-white mt-2 mb-4">AgenticSalesPro</h4>
+                    <p class="text-slate-400 mb-6 text-sm">Advanced autonomous sales intelligence system using multi-agent orchestration for lead research and personalized outreach.</p>
+                    <div class="flex flex-wrap gap-2 font-mono text-[10px] mb-6">
+                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">LangChain</span>
+                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Agentic AI</span>
                     </div>
+                    <a href="https://github.com/sadsunsuf-lgtm/AgenticSalesPro" target="_blank" class="inline-block border border-emerald-500/50 text-emerald-400 px-4 py-2 rounded-lg text-xs font-mono hover:bg-emerald-500 hover:text-black transition">View Repository</a>
                 </div>
 
                 <div class="group border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all bg-slate-900/20 p-8">
-                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">Project 02</span>
+                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">Recruitment Intelligence</span>
                     <h4 class="text-2xl font-bold text-white mt-2 mb-4">Talent Guard: Resume Ranking</h4>
                     <p class="text-slate-400 mb-6 text-sm">Recruitment intelligence platform batch-processing resumes against JDs with advanced retry logic.</p>
-                    <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                    <div class="flex flex-wrap gap-2 font-mono text-[10px] mb-6">
                         <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Python</span>
                         <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Tenacity</span>
                     </div>
+                    <a href="https://github.com/sadsunsuf-lgtm" target="_blank" class="inline-block border border-emerald-500/50 text-emerald-400 px-4 py-2 rounded-lg text-xs font-mono hover:bg-emerald-500 hover:text-black transition">View Repository</a>
                 </div>
 
                 <div class="group border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all bg-slate-900/20 p-8">
-                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">Project 03</span>
+                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">RAG SPECIALIST</span>
                     <h4 class="text-2xl font-bold text-white mt-2 mb-4">AI Document Intelligence</h4>
                     <p class="text-slate-400 mb-6 text-sm">Full-stack RAG system featuring semantic search for multi-format documents using Groq and FAISS.</p>
-                    <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                    <div class="flex flex-wrap gap-2 font-mono text-[10px] mb-6">
                         <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Groq</span>
                         <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">FAISS</span>
                     </div>
+                    <a href="https://github.com/sadsunsuf-lgtm" target="_blank" class="inline-block border border-emerald-500/50 text-emerald-400 px-4 py-2 rounded-lg text-xs font-mono hover:bg-emerald-500 hover:text-black transition">View Repository</a>
                 </div>
 
                 <div class="group border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all bg-slate-900/20 p-8">
-                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">Project 04</span>
-                    <h4 class="text-2xl font-bold text-white mt-2 mb-4">Multi-Agent Orchestrator</h4>
-                    <p class="text-slate-400 mb-6 text-sm">Self-correcting 'Critic-Worker' feedback loop to autonomously research and audit technical reports.</p>
-                    <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">LangGraph</span>
-                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Agents</span>
+                    <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest font-bold">Autonomous Agent</span>
+                    <h4 class="text-2xl font-bold text-white mt-2 mb-4">Autonomous Content Engineer</h4>
+                    <p class="text-slate-400 mb-6 text-sm">Multimodal SaaS using Gemini 2.5 Flash for copywriting and Pollinations AI for dynamic visual generation.</p>
+                    <div class="flex flex-wrap gap-2 font-mono text-[10px] mb-6">
+                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">Gemini 2.5</span>
+                        <span class="px-2 py-1 bg-slate-800 text-emerald-400 rounded border border-emerald-500/20">API Integration</span>
                     </div>
+                    <a href="https://github.com/sadsunsuf-lgtm" target="_blank" class="inline-block border border-emerald-500/50 text-emerald-400 px-4 py-2 rounded-lg text-xs font-mono hover:bg-emerald-500 hover:text-black transition">View Repository</a>
                 </div>
             </div>
 
@@ -111,26 +128,11 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="p-6 bg-slate-900/40 border border-slate-800 rounded-xl hover:bg-slate-800/60 transition group">
-                    <h5 class="text-white font-bold text-sm group-hover:text-emerald-400">Full-stack AI Chat</h5>
-                    <p class="text-slate-500 text-[11px] mt-2 mb-4 leading-relaxed">Real-time NLP interfaces using Streamlit and Hugging Face.</p>
-                    <a href="https://github.com/sadsunsuf-lgtm" class="text-[10px] font-mono text-emerald-500 underline underline-offset-4">Repo Link</a>
+                    <h5 class="text-white font-bold text-sm group-hover:text-emerald-400">Multi-Agent Orchestrator</h5>
+                    <p class="text-slate-500 text-[11px] mt-2 mb-4 leading-relaxed">Self-correcting 'Critic-Worker' loops for audits.</p>
+                    <a href="https://github.com/sadsunsuf-lgtm" class="text-[10px] font-mono text-emerald-500 underline">View Repo</a>
                 </div>
-                <div class="p-6 bg-slate-900/40 border border-slate-800 rounded-xl hover:bg-slate-800/60 transition group">
-                    <h5 class="text-white font-bold text-sm group-hover:text-emerald-400">Multimodal Pipelines</h5>
-                    <p class="text-slate-500 text-[11px] mt-2 mb-4 leading-relaxed">Intersection of LLMs and Generative Media for marketing suites.</p>
-                    <a href="https://github.com/sadsunsuf-lgtm" class="text-[10px] font-mono text-emerald-500 underline underline-offset-4">Repo Link</a>
                 </div>
-                <div class="p-6 bg-slate-900/40 border border-slate-800 rounded-xl hover:bg-slate-800/60 transition group">
-                    <h5 class="text-white font-bold text-sm group-hover:text-emerald-400">Scalable AI SaaS</h5>
-                    <p class="text-slate-500 text-[11px] mt-2 mb-4 leading-relaxed">Focusing on production-grade deployment for AI models.</p>
-                    <a href="https://github.com/sadsunsuf-lgtm" class="text-[10px] font-mono text-emerald-500 underline underline-offset-4">Repo Link</a>
-                </div>
-                <div class="p-6 bg-slate-900/40 border border-slate-800 rounded-xl hover:bg-slate-800/60 transition group">
-                    <h5 class="text-white font-bold text-sm group-hover:text-emerald-400">Enterprise Agents</h5>
-                    <p class="text-slate-500 text-[11px] mt-2 mb-4 leading-relaxed">Autonomous agents designed for complex enterprise automation.</p>
-                    <a href="https://github.com/sadsunsuf-lgtm" class="text-[10px] font-mono text-emerald-500 underline underline-offset-4">Repo Link</a>
-                </div>
-            </div>
         </section>
 
         <section id="contact" class="max-w-6xl mx-auto px-4 py-20 border-t border-slate-800">
@@ -141,8 +143,8 @@
                     <div class="space-y-6">
                         <a href="mailto:sadsunsuf@gmail.com" class="block text-emerald-400 font-bold hover:text-emerald-300 transition">sadsunsuf@gmail.com</a>
                         <div class="flex gap-4">
-                            <a href="https://github.com/sadsunsuf-lgtm" class="px-4 py-2 bg-slate-800 rounded-lg text-xs hover:bg-emerald-500/20 transition">GitHub</a>
-                            <a href="https://www.linkedin.com/in/sana-nasir-521937316/" class="px-4 py-2 bg-slate-800 rounded-lg text-xs hover:bg-emerald-500/20 transition">LinkedIn</a>
+                            <a href="https://github.com/sadsunsuf-lgtm" target="_blank" class="px-4 py-2 bg-slate-800 rounded-lg text-xs hover:bg-emerald-500/20 transition">GitHub</a>
+                            <a href="https://www.linkedin.com/in/sana-nasir-521937316/" target="_blank" class="px-4 py-2 bg-slate-800 rounded-lg text-xs hover:bg-emerald-500/20 transition">LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +152,7 @@
                     <input type="text" placeholder="Name" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:border-emerald-500 outline-none">
                     <input type="email" placeholder="Email" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:border-emerald-500 outline-none">
                     <textarea placeholder="Message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:border-emerald-500 outline-none"></textarea>
-                    <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3 rounded-lg transition">Send Message</button>
+                    <button type="button" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3 rounded-lg transition">Send Message</button>
                 </form>
             </div>
         </section>
