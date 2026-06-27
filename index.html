@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Nasir | Generative AI Engineer & LLM Systems Specialist</title>
+  <meta name="description" content="Sana Nasir — Production-focused Generative AI Engineer specializing in multi-agent LLM systems, RAG platforms, and AI-enhanced SaaS. Open to global AI/ML roles.">
+  <meta property="og:title" content="Sana Nasir | AI Engineer Portfolio">
+  <meta property="og:description" content="Architecting production-ready intelligent systems — LLM, RAG, Multi-Agent AI, and Full-Stack AI SaaS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sadsunsuf-lgtm.github.io/my-portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Noise overlay -->
+<div class="noise-overlay"></div>
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+
+<!-- ═══════════════════════ NAV ═══════════════════════ -->
+<nav class="fixed w-full z-50 glass" style="top:0;left:0;right:0;border-bottom:1px solid rgba(51,65,85,0.5);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;">
+    <div class="nav-logo" style="font-size:1.1rem;font-weight:700;letter-spacing:-0.03em;color:#fff;">
+      SANA<span>.</span>AI
+    </div>
+    <!-- Desktop Nav -->
+    <div id="desktop-nav" style="display:flex;align-items:center;gap:2rem;font-size:0.875rem;font-weight:500;">
+      <a href="#about"    style="color:#94a3b8;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#00f5a0'" onmouseout="this.style.color='#94a3b8'">About</a>
+      <a href="#experience" style="color:#94a3b8;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#00f5a0'" onmouseout="this.style.color='#94a3b8'">Experience</a>
+      <a href="#skills"   style="color:#94a3b8;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#00f5a0'" onmouseout="this.style.color='#94a3b8'">Skills</a>
+      <a href="#projects" style="color:#94a3b8;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#00f5a0'" onmouseout="this.style.color='#94a3b8'">Projects</a>
+      <a href="#certifications" style="color:#94a3b8;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#00f5a0'" onmouseout="this.style.color='#94a3b8'">Certs</a>
+      <a href="#contact" style="color:#030b14;background:linear-gradient(135deg,#00f5a0,#00c97a);font-weight:700;padding:0.45rem 1.25rem;border-radius:8px;text-decoration:none;font-size:0.8rem;transition:all 0.2s;box-shadow:0 0 18px rgba(0,245,160,0.3);" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Hire Me</a>
+    </div>
+    <!-- Hamburger -->
+    <div id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <a href="#about"    onclick="closeMobileMenu()">About</a>
+  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+  <a href="#skills"   onclick="closeMobileMenu()">Skills</a>
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+  <a href="#education" onclick="closeMobileMenu()">Education</a>
+  <a href="#contact"  onclick="closeMobileMenu()" style="color:#00f5a0;font-weight:700;">Hire Me</a>
+</div>
+
+<main>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="home" class="hero-section">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-glow"></div>
+
+    <div class="hero-badge" style="position:relative;z-index:5;">
+      Open to Global AI / ML Engineering Roles
+    </div>
+
+    <h1 class="hero-title" style="position:relative;z-index:5;">
+      Architecting <span class="gradient-text">Agentic</span><br>AI Systems.
+    </h1>
+
+    <!-- Typing animation subtitle -->
+    <div style="position:relative;z-index:5;margin-bottom:1.25rem;font-family:'JetBrains Mono',monospace;font-size:clamp(0.8rem,2vw,1rem);color:#00f5a0;min-height:1.5rem;text-shadow:0 0 20px rgba(0,245,160,0.5);">
+      &gt; <span id="typing-text" class="typing-cursor"></span>
+    </div>
+
+    <p class="hero-desc" style="position:relative;z-index:5;">
+      Hi, I'm <strong>Sana Nasir</strong> — a Production-focused Generative AI Engineer.
+      I specialize in bridging the gap between raw data and high-stakes commercial intelligence through
+      <strong>multi-agent workflows</strong>, <strong>RAG systems</strong>, and <strong>AI-enhanced SaaS architectures</strong>.
+      Engineering enterprise-grade solutions where precision, scalability, and sub-second performance are non-negotiable.
+    </p>
+
+    <div class="hero-buttons" style="position:relative;z-index:10;">
+      <a href="#projects" class="btn-primary">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        View Projects
+      </a>
+      <a href="#contact" class="btn-secondary">Contact Me</a>
+      <a href="assets/Sana_Nasir_AI_Engineer_Resume.pdf" download="Sana_Nasir_AI_Engineer_Resume.pdf" class="btn-download">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download Resume
+      </a>
+    </div>
+
+    <!-- Tech stack strip -->
+    <div style="position:relative;z-index:5;margin-top:3.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;max-width:600px;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">LangGraph</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">LangChain</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">FastAPI</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">Gemini 2.5 Pro</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">Docker</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">Next.js 16</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">FAISS · RAG</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#475569;padding:0.3rem 0.75rem;border:1px solid rgba(71,85,105,0.3);border-radius:100px;">Groq LPU</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ STATS ═══════════════════════ -->
+  <div class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="11" data-suffix="">0</span>
+        <span class="stat-label">Production AI Projects</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="500" data-suffix="+">0</span>
+        <span class="stat-label">Daily Active Users</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="15" data-suffix="">0</span>
+        <span class="stat-label">AI Agents (CIRO)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="99" data-suffix=".8%">0</span>
+        <span class="stat-label">Uptime Maintained</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about" class="about-section reveal">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-label">Who I Am</span>
+      <h2 class="section-title">From Pathophysiology<br>to Production AI</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-story">
+        <p>
+          My journey into AI is anything but conventional. With an <strong>M.Sc. in Physiology & Pathophysiology</strong>
+          from the University of Karachi, I spent years understanding complex biological systems —
+          patterns, signals, feedback loops. It turns out, that's exactly what AI does too.
+        </p>
+        <p>
+          The transition clicked when I realized that LLM architectures and biological neural networks share the same
+          fundamental philosophy: <strong>intelligent adaptation through pattern recognition.</strong> I dove deep into
+          the SMIT AI & Data Science program and never looked back.
+        </p>
+        <p>
+          Today, I build <strong>production-grade AI systems</strong> — from Pakistan's first bilingual emergency
+          AI orchestrator (CIRO) to enterprise HR-Tech SaaS platforms — solving real-world problems with
+          measurable, high-stakes impact.
+        </p>
+      </div>
+
+      <div>
+        <div class="about-highlights">
+          <div class="highlight-chip">
+            <span class="chip-icon">🏆</span>
+            <span>Top Performance Award — DevelopersHub Corporation (11 production AI projects)</span>
+          </div>
+          <div class="highlight-chip">
+            <span class="chip-icon">🌍</span>
+            <span>Google AI Seekho 2026 Hackathon — Pakistan National Level Participant</span>
+          </div>
+          <div class="highlight-chip">
+            <span class="chip-icon">🤖</span>
+            <span>Specialist in LangGraph multi-agent pipelines & RAG document intelligence</span>
+          </div>
+          <div class="highlight-chip">
+            <span class="chip-icon">🚀</span>
+            <span>Deployed live AI apps on Google Cloud Run, Vercel, Streamlit Cloud, HuggingFace Spaces</span>
+          </div>
+          <div class="highlight-chip">
+            <span class="chip-icon">🌐</span>
+            <span>Open to full-time AI/ML Engineering roles globally — Karachi-based, remote-ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+  <section id="experience" class="timeline-section">
+    <div class="timeline-inner">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">Work History</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="timeline reveal">
+        <!-- DevelopersHub -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">AI & Machine Learning Intern</div>
+              <div class="timeline-company">DevelopersHub Corporation · Karachi</div>
+            </div>
+            <span class="timeline-date">Apr 2026 – May 2026</span>
+          </div>
+          <div class="timeline-award">🏆 Top Performance Award Recipient</div>
+          <ul class="timeline-bullets">
+            <li>Delivered <strong>11 production-grade AI projects</strong> across 2 intensive phases.</li>
+            <li><strong>Phase 1 — ML & Data Science:</strong> EDA, Linear/Logistic Regression, K-Means, Random Forest, hyperparameter tuning on real-world datasets.</li>
+            <li><strong>Phase 2 — Agentic GenAI:</strong> Agentic PDF RAG Chatbot (LangChain + FAISS + Groq + Docker); BERT fine-tuning for news classification (HuggingFace Spaces); Zero-Shot vs. Few-Shot prompt engineering; Multimodal Price Predictor; Customer Churn ML pipeline.</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem;">
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">FAISS</span>
+            <span class="skill-tag">Groq</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">BERT / HuggingFace</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">RAG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <section id="skills" class="skills-section">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-label">What I Work With</span>
+      <h2 class="section-title">Technical Expertise</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">A full-stack AI engineering toolkit — from model selection to production deployment.</p>
+    </div>
+
+    <div class="skills-grid reveal">
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">🔬</div>
+          <span class="skill-card-title">GenAI & Orchestration</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">LangGraph (Multi-Agent)</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">RAG Systems</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">Agentic Web-Intelligence</span>
+          <span class="skill-tag">Chatbot Development</span>
+          <span class="skill-tag">Conversational AI</span>
+          <span class="skill-tag">Multi-turn Chat</span>
+          <span class="skill-tag">LLaMA 3.3</span>
+          <span class="skill-tag">Gemini 1.5/2.5 Pro</span>
+          <span class="skill-tag">Mistral</span>
+          <span class="skill-tag">Groq LPU</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">💻</div>
+          <span class="skill-card-title">Engineering & Backend</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Django 4.2 (SaaS)</span>
+          <span class="skill-tag">Django REST Framework</span>
+          <span class="skill-tag">Next.js 16 (App Router)</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">Gradio</span>
+          <span class="skill-tag">Python (OOP)</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">🧠</div>
+          <span class="skill-card-title">ML / Deep Learning</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Keras</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">CNN</span>
+          <span class="skill-tag">RNN / LSTM</span>
+          <span class="skill-tag">ANN</span>
+          <span class="skill-tag">GANs</span>
+          <span class="skill-tag">BERT / DistilBERT Fine-tuning</span>
+          <span class="skill-tag">HuggingFace Transformers</span>
+          <span class="skill-tag">Transfer Learning</span>
+          <span class="skill-tag">PCA</span>
+          <span class="skill-tag">Data Augmentation</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">📊</div>
+          <span class="skill-card-title">Data Science & NLP</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">EDA</span>
+          <span class="skill-tag">Statistical Analysis</span>
+          <span class="skill-tag">Pandas · NumPy</span>
+          <span class="skill-tag">Matplotlib · Seaborn</span>
+          <span class="skill-tag">Scikit-Learn Pipelines</span>
+          <span class="skill-tag">GridSearchCV</span>
+          <span class="skill-tag">F1 · ROC-AUC</span>
+          <span class="skill-tag">spaCy (NER)</span>
+          <span class="skill-tag">Text Embeddings</span>
+          <span class="skill-tag">Sentiment Analysis</span>
+          <span class="skill-tag">Zero / Few-Shot Prompting</span>
+          <span class="skill-tag">Word2Vec</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">👁️</div>
+          <span class="skill-card-title">Computer Vision & OCR</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">OpenCV (Advanced Preprocessing)</span>
+          <span class="skill-tag">Tesseract OCR</span>
+          <span class="skill-tag">Document Intelligence</span>
+          <span class="skill-tag">Financial Auditing DocIntel</span>
+          <span class="skill-tag">Resume Data Extraction</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">🛠️</div>
+          <span class="skill-card-title">DevOps & Integrations</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">CI/CD (Vercel)</span>
+          <span class="skill-tag">Google Cloud Run</span>
+          <span class="skill-tag">Streamlit Cloud</span>
+          <span class="skill-tag">HuggingFace Spaces</span>
+          <span class="skill-tag">FAISS (Vector DB)</span>
+          <span class="skill-tag">Pydantic v2</span>
+          <span class="skill-tag">JWT Auth</span>
+          <span class="skill-tag">GDPR / CCPA Compliance</span>
+          <span class="skill-tag">WhatsApp API</span>
+          <span class="skill-tag">Discord Webhook</span>
+          <span class="skill-tag">SMTP Automation</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+  <section id="projects" class="projects-section">
+    <div class="projects-inner">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">Built & Shipped</span>
+        <h2 class="section-title">AI Engineering Projects</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">11 production-grade systems — all live, all real-world impact.</p>
+      </div>
+
+      <!-- ── FEATURED PROJECTS (2-col) ── -->
+      <div class="featured-grid reveal">
+
+        <!-- CIRO -->
+        <div class="project-card featured">
+          <span class="project-badge badge-hackathon">Google Hackathon</span>
+          <div class="project-category">Crisis Intelligence / Multi-Agent AI</div>
+          <h3 class="project-title">CIRO — Crisis Intelligence & Response Orchestrator</h3>
+          <p class="project-desc">
+            Pakistan's first bilingual (Urdu/English) AI emergency system. 15 AI agents fuse
+            social media, weather, and traffic signals to detect urban crises in under 2 minutes
+            across 7 cities. Features real-time map visualization, voice commands via Web Speech API,
+            and Gemini-powered emergency guidance delivered via WhatsApp.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Google ADK</span>
+            <span class="tech-tag">Gemini 1.5 Flash</span>
+            <span class="tech-tag">Leaflet.js</span>
+            <span class="tech-tag">OpenStreetMap</span>
+            <span class="tech-tag">Web Speech API</span>
+            <span class="tech-tag">WhatsApp API</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://ciro-antigravity-hackathon.vercel.app" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live App
+            </a>
+            <a href="https://github.com/sadsunsuf-lgtm/CIRO-Antigravity-Hackathon" target="_blank" rel="noopener" class="link-btn link-btn-github">
+              ⟨/⟩ Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- AI RecruitPro -->
+        <div class="project-card featured">
+          <span class="project-badge badge-saas">Production SaaS</span>
+          <div class="project-category">HR-Tech / Talent Management</div>
+          <h3 class="project-title">AI RecruitPro — Talent Management Platform</h3>
+          <p class="project-desc">
+            Enterprise-grade SaaS with spaCy-driven resume parsing, sentiment-aware video interview
+            analysis, automated bias detection, and predictive candidate ranking. Built to ensure
+            inclusive, data-driven hiring at scale with a full Django REST + React architecture.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">spaCy</span>
+            <span class="tech-tag">Gemini</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">JWT Auth</span>
+          </div>
+          <div class="project-links">
+            <a href="https://ai-recruitment-platform-navy.vercel.app/" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live Demo
+            </a>
+            <a href="https://1drv.ms/v/c/3273883670748809/IQASSnKcLZQEQI6RzsIh_5CeAcUNYnuAOrFHBBvGRWzWTpc?e=pRBTpz" target="_blank" rel="noopener" class="link-btn link-btn-video">
+              🎬 Walkthrough
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── SECONDARY PROJECTS (2-col grid) ── -->
+      <div class="projects-divider">MORE PROJECTS</div>
+      <div class="projects-grid reveal reveal-delay-1">
+
+        <!-- Bolta Bazaar AI -->
+        <div class="project-card">
+          <span class="project-badge badge-cloud">Google Cloud Run</span>
+          <div class="project-category">Voice-First FinTech / Urdu AI</div>
+          <h3 class="project-title">Bolta Bazaar AI</h3>
+          <p class="project-desc">
+            Voice-first inventory management for local shopkeepers using Gemini 1.5 Flash to convert
+            Urdu/Roman Urdu speech into structured ledger updates. Removes literacy and typing barriers.
+            Fully containerized and deployed live on Google Cloud Run.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">React (Vite)</span>
+            <span class="tech-tag">Gemini 1.5 Flash</span>
+            <span class="tech-tag">Whisper</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Google Cloud Run</span>
+          </div>
+          <div class="project-links">
+            <a href="https://bolta-bazaar-frontend-2ng5m7h2sa-el.a.run.app" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- AI Health Assistant -->
+        <div class="project-card">
+          <span class="project-badge badge-speed">Groq LPU Speed</span>
+          <div class="project-category">Health-Tech / Conversational AI</div>
+          <h3 class="project-title">AI Health Assistant Chatbot</h3>
+          <p class="project-desc">
+            High-speed medical information retrieval system using Groq's LPU architecture for
+            sub-second responses. Features a safety-first architecture with mandatory medical
+            disclaimers and prompt-engineered safety guardrails. CI/CD deployed via Vercel.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Next.js 16</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Groq API</span>
+            <span class="tech-tag">LLaMA 3.3</span>
+            <span class="tech-tag">TailwindCSS</span>
+            <span class="tech-tag">Vercel CI/CD</span>
+          </div>
+          <div class="project-links">
+            <a href="https://ai-ml-internship-tasks.vercel.app/" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live App
+            </a>
+          </div>
+        </div>
+
+        <!-- Self-Healing MAS -->
+        <div class="project-card">
+          <span class="project-badge badge-agentic">Agentic Reflection</span>
+          <div class="project-category">AI Orchestration / Multi-Agent Systems</div>
+          <h3 class="project-title">Self-Healing Multi-Agent System</h3>
+          <p class="project-desc">
+            Advanced MAS utilizing recursive self-healing loops via LangGraph. Features a Research
+            Analyst agent for data synthesis and a Quality Strategist agent for human-level auditing
+            and targeted critique-driven rewrites. Real-time DuckDuckGo search integration.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">DuckDuckGo Search</span>
+            <span class="tech-tag">State Management</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://self-healing-ai-agent-x2wk4mcvnrboil3ug7qbtq.streamlit.app/" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live Demo
+            </a>
+            <a href="https://github.com/sadsunsuf-lgtm/self-healing-ai-agent" target="_blank" rel="noopener" class="link-btn link-btn-github">
+              ⟨/⟩ Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- SEO_FORGE Pro -->
+        <div class="project-card">
+          <span class="project-badge badge-live">AI Content SaaS</span>
+          <div class="project-category">AI Content / SEO Automation</div>
+          <h3 class="project-title">SEO_FORGE Pro (SaaS)</h3>
+          <p class="project-desc">
+            Dual-inference "Battle Mode" content engine — pits Gemini 2.5 vs LLaMA 3.3 head-to-head.
+            Reduced manual SEO workflow from 2 days to 5 minutes (98% reduction). 500+ daily users
+            at 99.8% uptime. "Llama-as-a-Judge" benchmarking and real-time TPS monitoring.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Gemini 2.5</span>
+            <span class="tech-tag">LLaMA 3.3</span>
+            <span class="tech-tag">Groq</span>
+            <span class="tech-tag">LangChain</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://seo-forge-pro.vercel.app/" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live Demo
+            </a>
+            <a href="https://github.com/sadsunsuf-lgtm/seo-forge-pro" target="_blank" rel="noopener" class="link-btn link-btn-github">
+              ⟨/⟩ Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- Receipt Physician Pro -->
+        <div class="project-card">
+          <div class="project-category">Vision & OCR / Financial AI</div>
+          <h3 class="project-title">Receipt Physician Pro</h3>
+          <p class="project-desc">
+            AI financial auditor merging OpenCV advanced preprocessing with Tesseract OCR and
+            Mistral-7B for automated expense auditing, anomaly detection, and personalized
+            savings recommendations. Multimodal document intelligence pipeline.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Tesseract OCR</span>
+            <span class="tech-tag">Mistral-7B</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://ai-receipt-analyzer-6p7se2jeezv4sm72w5t5te.streamlit.app/" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live Demo
+            </a>
+            <a href="https://github.com/sadsunsuf-lgtm/ai-receipt-analyzer" target="_blank" rel="noopener" class="link-btn link-btn-github">
+              ⟨/⟩ Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- TalentGuard -->
+        <div class="project-card">
+          <div class="project-category">HR-Tech / AI Screening</div>
+          <h3 class="project-title">TalentGuard — AI Resume Screener</h3>
+          <p class="project-desc">
+            Batch-processes PDFs against job descriptions using Gemini 1.5 Flash. Scores and ranks
+            candidates, generates AI Executive Memos for hiring summaries. Implemented Tenacity
+            exponential-backoff retry logic for production stability and dynamic Streamlit visualizations.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Gemini 1.5 Flash</span>
+            <span class="tech-tag">Tenacity</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://ai-resume-screener-3bo3hybbryogebknycuje6.streamlit.app/" target="_blank" rel="noopener" class="link-btn link-btn-live">
+              🚀 Live App
+            </a>
+            <a href="https://github.com/sadsunsuf-lgtm/AI-Resume-Screener" target="_blank" rel="noopener" class="link-btn link-btn-github">
+              ⟨/⟩ Repository
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── MINI PROJECTS GRID ── -->
+      <div class="projects-divider">ADDITIONAL PROJECTS</div>
+      <div class="mini-grid reveal reveal-delay-2">
+
+        <!-- Autonomous LinkedIn Agent -->
+        <div class="mini-card">
+          <div class="project-category" style="font-size:0.6rem;margin-bottom:0.35rem;">AI Content Automation</div>
+          <div class="mini-card-title">Autonomous LinkedIn Agent</div>
+          <p class="mini-card-desc">
+            Multimodal AI agent automating LinkedIn content creation using Gemini 2.5 Flash for
+            copywriting and Pollinations AI for dynamic visuals. Automated distribution via Discord Webhooks.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem;">
+            <span class="tech-tag">Gemini 2.5 Flash</span>
+            <span class="tech-tag">Pollinations AI</span>
+            <span class="tech-tag">Discord Webhook</span>
+          </div>
+          <div class="mini-card-links">
+            <a href="https://linkedin-automation-agentgit-8n5p5zpbnecgqvmcgcepgq.streamlit.app/" target="_blank" rel="noopener">🚀 Live Demo</a>
+            <a href="https://github.com/sadsunsuf-lgtm/linkedin-automation-agent" target="_blank" rel="noopener">⟨/⟩ GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- SalesScout AI Pro -->
+        <div class="mini-card">
+          <div class="project-category" style="font-size:0.6rem;margin-bottom:0.35rem;">B2B Lead Intelligence</div>
+          <div class="mini-card-title">SalesScout AI Pro</div>
+          <p class="mini-card-desc">
+            Agentic B2B lead intelligence tool that researches companies in real-time via DuckDuckGo,
+            drafts multi-tone outreach using LLaMA 3.3, bulk CSV processing, and direct Gmail integration.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem;">
+            <span class="tech-tag">LLaMA 3.3</span>
+            <span class="tech-tag">DuckDuckGo API</span>
+            <span class="tech-tag">Gmail API</span>
+          </div>
+          <div class="mini-card-links">
+            <a href="https://agenticsalespro-gdnwmfsgxuzm8ntemngiip.streamlit.app/" target="_blank" rel="noopener">🚀 Live Demo</a>
+            <a href="https://github.com/sadsunsuf-lgtm/AgenticSalesPro" target="_blank" rel="noopener">⟨/⟩ GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- DocIntel -->
+        <div class="mini-card">
+          <div class="project-category" style="font-size:0.6rem;margin-bottom:0.35rem;">Document Intelligence / RAG</div>
+          <div class="mini-card-title">DocIntel: Production RAG System</div>
+          <p class="mini-card-desc">
+            Multimodal PDF intelligence platform combining Groq Inference (LLaMA 3) for speed with
+            FAISS Vector Search for precision. Smart chunking, one-click technical audits and risk analysis.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem;">
+            <span class="tech-tag">Groq · LLaMA 3</span>
+            <span class="tech-tag">FAISS</span>
+            <span class="tech-tag">LangChain</span>
+          </div>
+          <div class="mini-card-links">
+            <a href="https://ai-document-intelligence-8dw3qyf7bkxp6nrqdrmdfd.streamlit.app/" target="_blank" rel="noopener">🚀 Live Demo</a>
+            <a href="https://github.com/sadsunsuf-lgtm/AI-document-Intelligence" target="_blank" rel="noopener">⟨/⟩ GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- BERT News Classifier (from internship) -->
+        <div class="mini-card">
+          <div class="project-category" style="font-size:0.6rem;margin-bottom:0.35rem;">NLP / Fine-tuning</div>
+          <div class="mini-card-title">BERT News Classifier</div>
+          <p class="mini-card-desc">
+            Fine-tuned DistilBERT on news classification dataset using HuggingFace Transformers.
+            Deployed on HuggingFace Spaces. Internship Phase 2 — DevelopersHub Corporation.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem;">
+            <span class="tech-tag">DistilBERT</span>
+            <span class="tech-tag">HuggingFace</span>
+            <span class="tech-tag">Transformers</span>
+          </div>
+          <div class="mini-card-links">
+            <a href="https://github.com/sadsunsuf-lgtm" target="_blank" rel="noopener">⟨/⟩ GitHub Profile</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CERTIFICATIONS ═══════════════════════ -->
+  <section id="certifications" class="cert-section reveal">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-label">Credentials</span>
+      <h2 class="section-title">Certifications</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="certs-grid">
+
+      <div class="cert-card">
+        <div class="cert-icon">🤖</div>
+        <div>
+          <div class="cert-name">Introduction to Modern AI</div>
+          <div class="cert-issuer">Anthropic</div>
+          <div class="cert-date">Badge & Certificate of Completion</div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🐍</div>
+        <div>
+          <div class="cert-name">Python Essentials 1 & 2</div>
+          <div class="cert-issuer">Cisco NetAcad</div>
+          <div class="cert-date">Badge & Certificate · 2025</div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div>
+          <div class="cert-name">Introduction to Data Science</div>
+          <div class="cert-issuer">Cisco NetAcad</div>
+          <div class="cert-date">Badge & Certificate · Oct 2025</div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <div>
+          <div class="cert-name">AI Seekho 2026 — Google National Hackathon</div>
+          <div class="cert-issuer">Google for Developers · Tech Nation Pakistan · Telenor 4G</div>
+          <div class="cert-date">Certificate of Participation · 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EDUCATION ═══════════════════════ -->
+  <section id="education" class="edu-section">
+    <div class="edu-inner">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">Academic Background</span>
+        <h2 class="section-title">Education</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="edu-grid reveal">
+
+        <div class="edu-card">
+          <div style="font-size:1.75rem;margin-bottom:0.75rem;">🎓</div>
+          <div class="edu-degree">AI & Data Science</div>
+          <div class="edu-school">SMIT — Saylani Mass IT Training</div>
+          <div class="edu-year">May 2025 – Dec 2025</div>
+        </div>
+
+        <div class="edu-card">
+          <div style="font-size:1.75rem;margin-bottom:0.75rem;">🔬</div>
+          <div class="edu-degree">M.Sc. Physiology & Pathophysiology</div>
+          <div class="edu-school">University of Karachi</div>
+          <div class="edu-year">2004 – 2007</div>
+          <div style="font-size:0.72rem;color:#475569;margin-top:0.35rem;line-height:1.5;">
+            Foundation for understanding complex adaptive systems — the basis for transitioning into AI.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section id="contact" class="contact-section reveal">
+    <span class="section-label">Let's Connect</span>
+    <h2 class="section-title">Let's Build Something Intelligent.</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:2rem;">
+      Open to AI Engineering, Generative AI Specialist, and MLOps roles globally.
+      Available for AI Automation, Orchestration, and Full-Stack AI Engineering.
+    </p>
+
+    <div class="contact-card">
+      <a href="mailto:sadsunsuf@gmail.com" class="contact-email">sadsunsuf@gmail.com</a>
+      <span class="contact-phone">📞 0345-2262992 · Karachi, Pakistan</span>
+
+      <div class="social-links">
+        <a href="https://github.com/sadsunsuf-lgtm" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/sana-nasir-521937316/" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://sadsunsuf-lgtm.github.io/my-portfolio" target="_blank" rel="noopener" class="social-link">
+          🌐 Portfolio
+        </a>
+        <a href="assets/Sana_Nasir_AI_Engineer_Resume.pdf" download="Sana_Nasir_AI_Engineer_Resume.pdf" class="social-link" style="color:#c4b5fd;border-color:rgba(139,92,246,0.3);">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer>
+  <p class="footer-text">
+    &copy; 2026 <a href="#home">Sana Nasir</a> · Generative AI Engineer · Karachi, Pakistan
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
