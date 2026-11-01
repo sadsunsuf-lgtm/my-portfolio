@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ─── 8. TYPING ANIMATION FOR HERO SUBTITLE ─── */
   const roles = [
     'Generative AI Engineer',
+    'AI Evaluation Specialist',
     'Multi-Agent Architect',
     'RAG Systems Specialist',
     'LLM Pipeline Engineer',
